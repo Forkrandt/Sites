@@ -1,71 +1,57 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Анимированный таймер обратного отсчета</title>
     <link rel="stylesheet" href="css.css">
 </head>
+
 <body>
     <div class="container">
-               
+
         <div class="timer-wrapper">
             <svg class="progress-ring" width="200" height="200" viewBox="0 0 200 200">
-                
-                <circle class="progress-ring__bg"
-                        cx="100" cy="100" r="85"
-                        fill="none"
-                        stroke="#e0e0e0"
-                        stroke-width="8"/>
-                
-               
-                <circle class="progress-ring__circle"
-                        cx="100" cy="100" r="85"
-                        fill="none"
-                        stroke="#4caf50"
-                        stroke-width="8"
-                        stroke-linecap="round"/>
+
+                <circle class="progress-ring__bg" cx="100" cy="100" r="85" fill="none" stroke="#e0e0e0"
+                    stroke-width="8" />
+
+
+                <circle class="progress-ring__circle" cx="100" cy="100" r="85" fill="none" stroke="#4caf50"
+                    stroke-width="8" stroke-linecap="round" />
             </svg>
-            
-           
+
+
             <div class="timer-display">
                 <span id="minutes">00</span>:<span id="seconds">00</span>
             </div>
         </div>
-        
-        
+
+
         <div class="time-inputs">
             <div class="input-group">
                 <label for="minutes-input">Минуты:</label>
-                <input type="number" 
-                       id="minutes-input" 
-                       min="0" 
-                       max="99" 
-                       value="1"
-                       step="1">
+                <input type="number" id="minutes-input" min="0" max="99" value="1" step="1">
             </div>
-            
+
             <div class="input-group">
                 <label for="seconds-input">Секунды:</label>
-                <input type="number" 
-                       id="seconds-input" 
-                       min="0" 
-                       max="59" 
-                       value="30"
-                       step="1">
+                <input type="number" id="seconds-input" min="0" max="59" value="30" step="1">
             </div>
         </div>
-        
+
         <div class="controls">
-            <button id="startBtn" class="btn btn-start">▶ Старт</button>
-            <button id="pauseBtn" class="btn btn-pause" disabled>⏸ Пауза</button>
-            <button id="resetBtn" class="btn btn-reset">🔄 Сброс</button>
+            <button id="startBtn" class="btn btn-start">Старт</button>
+            <button id="pauseBtn" class="btn btn-pause" disabled> Пауза</button>
+            <button id="resetBtn" class="btn btn-reset">Сброс</button>
         </div>
-        
-       
+
+
         <div id="message" class="message"></div>
     </div>
-    
+
     <script src="js.js"></script>
 </body>
+
 </html>
